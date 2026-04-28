@@ -12,6 +12,7 @@ journey to become an ML Engineer at Google.
 | Day | Problem | Difficulty | Topic |
 |-----|---------|------------|-------|
 | 1 | Two Sum | Easy | HashMap |
+| 2 | Valid Parentheses | Easy | Stack |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
