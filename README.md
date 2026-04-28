@@ -14,6 +14,11 @@ journey to become an ML Engineer at Google.
 | 1 | Two Sum | Easy | HashMap |
 | 2 | Valid Parentheses | Easy | Stack |
 
+## Python Practice
+| Day | Topic | Concepts Covered |
+|-----|-------|-----------------|
+| 2 | Python Basics | Variables, Lists, Loops, If-Else |
+
 ## About Me
 - ECE Student @ RGM College, Nandyal
 - Target: ML Engineer at Google by 2028
