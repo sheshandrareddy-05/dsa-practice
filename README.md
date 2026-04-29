@@ -13,6 +13,7 @@ journey to become an ML Engineer at Google.
 |-----|---------|------------|-------|
 | 1 | Two Sum | Easy | HashMap |
 | 2 | Valid Parentheses | Easy | Stack |
+| 3 | Best Time to Buy and Sell Stock | Easy | Array |
 
 ## Python Practice
 | Day | Topic | Concepts Covered |
