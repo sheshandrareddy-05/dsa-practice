@@ -18,7 +18,8 @@ journey to become an ML Engineer at Google.
 ## Python Practice
 | Day | Topic | Concepts Covered |
 |-----|-------|-----------------|
-| 2 | Python Basics | Variables, Lists, Loops, If-Else |
+| 2| Python Basics | Variables, Lists, Loops, If-Else |
+| 3 | python_functions.py | Functions, Args, Return Values |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
