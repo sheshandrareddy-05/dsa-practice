@@ -8,7 +8,7 @@ journey to become an ML Engineer at Google.
 - Build strong DSA foundation for FAANG interviews
 - Language: Python3
 
-## Progress
+## DSA Progress
 | Day | Problem | Difficulty | Topic |
 |-----|---------|------------|-------|
 | 1 | Two Sum | Easy | HashMap |
@@ -17,10 +17,11 @@ journey to become an ML Engineer at Google.
 | 4 | Contains Duplicate | Easy | HashSet |
 
 ## Python Practice
-| Day | Topic | Concepts Covered |
-|-----|-------|-----------------|
-| 2| Python Basics | Variables, Lists, Loops, If-Else |
+| Day | File | Concepts Covered |
+|-----|------|-----------------|
+| 2 | python_basics.py | Variables, Lists, Loops, If-Else |
 | 3 | python_functions.py | Functions, Args, Return Values |
+| 4 | data_types.py | str, int, float, bool |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
