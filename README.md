@@ -15,6 +15,7 @@ journey to become an ML Engineer at Google.
 | 2 | Valid Parentheses | Easy | Stack |
 | 3 | Best Time to Buy and Sell Stock | Easy | Array |
 | 4 | Contains Duplicate | Easy | HashSet |
+| 5 | Maximum Subarray | Easy | Kadane's Algorithm |
 
 ## Python Practice
 | Day | File | Concepts Covered |
