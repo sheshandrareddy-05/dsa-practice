@@ -16,6 +16,7 @@ journey to become an ML Engineer at Google.
 | 3 | Best Time to Buy and Sell Stock | Easy | Array |
 | 4 | Contains Duplicate | Easy | HashSet |
 | 5 | Maximum Subarray | Easy | Kadane's Algorithm |
+| 6 | Reverse Linked List | Easy | Linked List |
 
 ## Python Practice
 | Day | File | Concepts Covered |
