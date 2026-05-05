@@ -20,6 +20,7 @@ journey to become an ML Engineer at Google.
 | 7 | Climbing Stairs | Easy | Dynamic Programming |
 | 8 | Merge Two Sorted Lists | Easy | Linked List |
 | 9 | Linked List Cycle | Easy | Linked List |
+| 10 | Reverse String | Easy | Two Pointers |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
