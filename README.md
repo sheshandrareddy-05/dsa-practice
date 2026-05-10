@@ -25,6 +25,7 @@ journey to become an ML Engineer at Google.
 | 12 | Flood Fill | Easy | BFS/DFS |
 | 13 | Lowest Common Ancestor of BST | Easy | Binary Search Tree |
 | 14 | Balanced Binary Tree | Easy | Binary Tree |
+| 15 | Diameter of Binary Tree | Easy | Binary Tree |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
