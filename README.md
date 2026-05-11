@@ -26,6 +26,7 @@ journey to become an ML Engineer at Google.
 | 13 | Lowest Common Ancestor of BST | Easy | Binary Search Tree |
 | 14 | Balanced Binary Tree | Easy | Binary Tree |
 | 15 | Diameter of Binary Tree | Easy | Binary Tree |
+| 16 | Middle of Linked List | Easy | Linked List |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
