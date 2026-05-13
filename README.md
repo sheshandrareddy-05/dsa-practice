@@ -28,6 +28,7 @@ journey to become an ML Engineer at Google.
 | 15 | Diameter of Binary Tree | Easy | Binary Tree |
 | 16 | Middle of Linked List | Easy | Linked List |
 | 17 | Maximum Depth of Binary Tree | Easy | Binary Tree |
+| 18 | First Bad Version | Easy | Binary Search |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
