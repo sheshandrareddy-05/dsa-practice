@@ -30,6 +30,7 @@ journey to become an ML Engineer at Google.
 | 17 | Maximum Depth of Binary Tree | Easy | Binary Tree |
 | 18 | First Bad Version | Easy | Binary Search |
 | 19 | Ransom Note | Easy | HashMap |
+| 20 | Move Zeroes | Easy | Two Pointers |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
