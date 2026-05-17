@@ -31,6 +31,7 @@ journey to become an ML Engineer at Google.
 | 18 | First Bad Version | Easy | Binary Search |
 | 19 | Ransom Note | Easy | HashMap |
 | 20 | Move Zeroes | Easy | Two Pointers |
+| 21 | Squares of Sorted Array | Easy | Two Pointers |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
