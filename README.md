@@ -32,6 +32,7 @@ journey to become an ML Engineer at Google.
 | 19 | Ransom Note | Easy | HashMap |
 | 20 | Move Zeroes | Easy | Two Pointers |
 | 21 | Squares of Sorted Array | Easy | Two Pointers |
+| 22 | Longest Substring Without Repeating | Medium | Sliding Window |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
