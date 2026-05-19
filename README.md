@@ -33,6 +33,7 @@ journey to become an ML Engineer at Google.
 | 20 | Move Zeroes | Easy | Two Pointers |
 | 21 | Squares of Sorted Array | Easy | Two Pointers |
 | 22 | Longest Substring Without Repeating | Medium | Sliding Window |
+| 23 | 3Sum | Medium | Two Pointers |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
