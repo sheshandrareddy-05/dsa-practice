@@ -35,6 +35,7 @@ journey to become an ML Engineer at Google.
 | 22 | Longest Substring Without Repeating | Medium | Sliding Window |
 | 23 | 3Sum | Medium | Two Pointers |
 | 24 | Product of Array Except Self | Medium | Array |
+| 25 | Number of Islands | Medium | BFS/DFS |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
