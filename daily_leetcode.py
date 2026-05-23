@@ -28,9 +28,34 @@ PROBLEMS = {
     20: {"name":"Move Zeroes","difficulty":"Easy","topic":"Two Pointers","url":"https://leetcode.com/problems/move-zeroes","filename":"move_zeroes.py","solution":'''from typing import List\n\nclass Solution:\n    def moveZeroes(self, nums: List[int]) -> None:\n        pos = 0\n        for num in nums:\n            if num != 0:\n                nums[pos] = num\n                pos += 1\n        while pos < len(nums):\n            nums[pos] = 0\n            pos += 1''',"explanation":"\n  PATTERN: Two Pointers\n  - Move all non-zeros forward, fill rest with zeros\n  TIME: O(n) | SPACE: O(1)"},
     21: {"name":"Squares of Sorted Array","difficulty":"Easy","topic":"Two Pointers","url":"https://leetcode.com/problems/squares-of-a-sorted-array","filename":"squares_sorted_array.py","solution":'''from typing import List\n\nclass Solution:\n    def sortedSquares(self, nums: List[int]) -> List[int]:\n        res = [0] * len(nums)\n        l, r = 0, len(nums)-1\n        pos = len(nums)-1\n        while l <= r:\n            if abs(nums[l]) > abs(nums[r]):\n                res[pos] = nums[l]**2; l += 1\n            else:\n                res[pos] = nums[r]**2; r -= 1\n            pos -= 1\n        return res''',"explanation":"\n  PATTERN: Two Pointers from both ends\n  - Largest squares come from either end\n  - Fill result from back to front\n  TIME: O(n) | SPACE: O(n)"},
     22: {"name":"Longest Substring Without Repeating","difficulty":"Medium","topic":"Sliding Window","url":"https://leetcode.com/problems/longest-substring-without-repeating-characters","filename":"longest_substring.py","solution":'''class Solution:\n    def lengthOfLongestSubstring(self, s: str) -> int:\n        char_set = set()\n        left = max_len = 0\n        for right in range(len(s)):\n            while s[right] in char_set:\n                char_set.remove(s[left])\n                left += 1\n            char_set.add(s[right])\n            max_len = max(max_len, right - left + 1)\n        return max_len''',"explanation":"\n  PATTERN: Sliding Window\n  - Expand right, shrink left when duplicate found\n  TIME: O(n) | SPACE: O(n)"},
-    23: {"name":"3Sum","difficulty":"Medium","topic":"Two Pointers","url":"https://leetcode.com/problems/3sum","filename":"three_sum.py","solution":'''from typing import List\n\nclass Solution:\n    def threeSum(self, nums: List[int]) -> List[List[int]]:\n        nums.sort()\n        res = []\n        for i in range(len(nums)-2):\n            if i > 0 and nums[i] == nums[i-1]: continue\n            l, r = i+1, len(nums)-1\n            while l < r:\n                s = nums[i]+nums[l]+nums[r]\n                if s == 0:\n                    res.append([nums[i],nums[l],nums[r]])\n                    while l < r and nums[l]==nums[l+1]: l+=1\n                    while l < r and nums[r]==nums[r-1]: r-=1\n                    l+=1; r-=1\n                elif s < 0: l+=1\n                else: r-=1\n        return res''',"explanation":"\n  PATTERN: Sort + Two Pointers\n  - Fix one element, two pointers for the other two\n  - Skip duplicates carefully\n  TIME: O(n²) | SPACE: O(1)"},
-    24: {"name":"Product of Array Except Self","difficulty":"Medium","topic":"Array","url":"https://leetcode.com/problems/product-of-array-except-self","filename":"product_except_self.py","solution":'''from typing import List\n\nclass Solution:\n    def productExceptSelf(self, nums: List[int]) -> List[int]:\n        n = len(nums)\n        res = [1]*n\n        prefix = 1\n        for i in range(n):\n            res[i] = prefix\n            prefix *= nums[i]\n        suffix = 1\n        for i in range(n-1,-1,-1):\n            res[i] *= suffix\n            suffix *= nums[i]\n        return res''',"explanation":"\n  PATTERN: Prefix + Suffix\n  - result[i] = product of all left × product of all right\n  TIME: O(n) | SPACE: O(1)"},
-    25: {"name":"Number of Islands","difficulty":"Medium","topic":"BFS/DFS","url":"https://leetcode.com/problems/number-of-islands","filename":"number_of_islands.py","solution":'''from typing import List\n\nclass Solution:\n    def numIslands(self, grid: List[List[str]]) -> int:\n        count = 0\n        def dfs(r,c):\n            if r<0 or r>=len(grid) or c<0 or c>=len(grid[0]) or grid[r][c]!="1": return\n            grid[r][c]="0"\n            dfs(r+1,c);dfs(r-1,c);dfs(r,c+1);dfs(r,c-1)\n        for r in range(len(grid)):\n            for c in range(len(grid[0])):\n                if grid[r][c]=="1":\n                    count+=1\n                    dfs(r,c)\n        return count''',"explanation":"\n  PATTERN: DFS on Grid\n  - Each unvisited '1' is a new island\n  - DFS marks all connected land as visited\n  TIME: O(n*m) | SPACE: O(n*m)"},
+    23: {"name":"3Sum","difficulty":"Medium","topic":"Two Pointers","url":"https://leetcode.com/problems/3sum","filename":"three_sum.py","solution":'''from typing import List\n\nclass Solution:\n    def threeSum(self, nums: List[int]) -> List[List[int]]:\n        nums.sort()\n        res = []\n        for i in range(len(nums)-2):\n            if i > 0 and nums[i] == nums[i-1]: continue\n            l, r = i+1, len(nums)-1\n            while l < r:\n                s = nums[i]+nums[l]+nums[r]\n                if s == 0:\n                    res.append([nums[i],nums[l],nums[r]])\n                    while l < r and nums[l]==nums[l+1]: l+=1\n                    while l < r and nums[r]==nums[r-1]: r-=1\n                    l+=1; r-=1\n                elif s < 0: l+=1\n                else: r-=1\n        return res''',"explanation":"\n  PATTERN: Sort + Two Pointers\n  - Fix one element, two pointers for the other two\n  - Skip duplicates carefully\n  TIME: O(n^2) | SPACE: O(1)"},
+    24: {"name":"Product of Array Except Self","difficulty":"Medium","topic":"Array","url":"https://leetcode.com/problems/product-of-array-except-self","filename":"product_except_self.py","solution":'''from typing import List\n\nclass Solution:\n    def productExceptSelf(self, nums: List[int]) -> List[int]:\n        n = len(nums)\n        res = [1]*n\n        prefix = 1\n        for i in range(n):\n            res[i] = prefix\n            prefix *= nums[i]\n        suffix = 1\n        for i in range(n-1,-1,-1):\n            res[i] *= suffix\n            suffix *= nums[i]\n        return res''',"explanation":"\n  PATTERN: Prefix + Suffix\n  - result[i] = product of all left x product of all right\n  TIME: O(n) | SPACE: O(1)"},
+    25: {"name":"Number of Islands","difficulty":"Medium","topic":"BFS/DFS","url":"https://leetcode.com/problems/number-of-islands","filename":"number_of_islands.py","solution":'''from typing import List\n\nclass Solution:\n    def numIslands(self, grid: List[List[str]]) -> int:\n        count = 0\n        def dfs(r,c):\n            if r<0 or r>=len(grid) or c<0 or c>=len(grid[0]) or grid[r][c]!="1": return\n            grid[r][c]="0"\n            dfs(r+1,c);dfs(r-1,c);dfs(r,c+1);dfs(r,c-1)\n        for r in range(len(grid)):\n            for c in range(len(grid[0])):\n                if grid[r][c]=="1":\n                    count+=1\n                    dfs(r,c)\n        return count''',"explanation":"\n  PATTERN: DFS on Grid\n  - Each unvisited 1 is a new island\n  - DFS marks all connected land as visited\n  TIME: O(n*m) | SPACE: O(n*m)"},
+    26: {"name":"Coin Change","difficulty":"Medium","topic":"Dynamic Programming","url":"https://leetcode.com/problems/coin-change","filename":"coin_change.py","solution":'''from typing import List\n\nclass Solution:\n    def coinChange(self, coins: List[int], amount: int) -> int:\n        dp = [float("inf")] * (amount + 1)\n        dp[0] = 0\n        for i in range(1, amount + 1):\n            for coin in coins:\n                if coin <= i:\n                    dp[i] = min(dp[i], dp[i - coin] + 1)\n        return dp[amount] if dp[amount] != float("inf") else -1''',"explanation":"\n  PATTERN: Dynamic Programming (Bottom-Up)\n  - dp[i] = minimum coins needed to make amount i\n  - For each amount, try every coin\n  - dp[i] = min(dp[i], dp[i-coin] + 1)\n  TIME: O(amount * coins) | SPACE: O(amount)"},
+    27: {"name":"Word Search","difficulty":"Medium","topic":"Backtracking","url":"https://leetcode.com/problems/word-search","filename":"word_search.py","solution":'''from typing import List\n\nclass Solution:\n    def exist(self, board: List[List[str]], word: str) -> bool:\n        rows, cols = len(board), len(board[0])\n        path = set()\n        def dfs(r, c, i):\n            if i == len(word): return True\n            if r<0 or r>=rows or c<0 or c>=cols: return False\n            if board[r][c] != word[i] or (r,c) in path: return False\n            path.add((r,c))\n            res = dfs(r+1,c,i+1) or dfs(r-1,c,i+1) or dfs(r,c+1,i+1) or dfs(r,c-1,i+1)\n            path.remove((r,c))\n            return res\n        for r in range(rows):\n            for c in range(cols):\n                if dfs(r,c,0): return True\n        return False''',"explanation":"\n  PATTERN: Backtracking\n  - Try starting from every cell\n  - DFS to match each character\n  - Mark visited, unmark on backtrack\n  TIME: O(n*m*4^L) | SPACE: O(L)"},
+    28: {"name":"Binary Tree Level Order Traversal","difficulty":"Medium","topic":"BFS","url":"https://leetcode.com/problems/binary-tree-level-order-traversal","filename":"binary_tree_level_order.py","solution":'''from typing import List, Optional\nfrom collections import deque\n\nclass Solution:\n    def levelOrder(self, root: Optional[object]) -> List[List[int]]:\n        if not root: return []\n        result = []\n        queue = deque([root])\n        while queue:\n            level = []\n            for _ in range(len(queue)):\n                node = queue.popleft()\n                level.append(node.val)\n                if node.left: queue.append(node.left)\n                if node.right: queue.append(node.right)\n            result.append(level)\n        return result''',"explanation":"\n  PATTERN: BFS with Queue\n  - Process nodes level by level\n  - Use queue size to know when level ends\n  TIME: O(n) | SPACE: O(n)"},
+    29: {"name":"Clone Graph","difficulty":"Medium","topic":"Graph","url":"https://leetcode.com/problems/clone-graph","filename":"clone_graph.py","solution":'''from collections import deque\n\nclass Solution:\n    def cloneGraph(self, node):\n        if not node: return None\n        clones = {node: type(node)(node.val)}\n        queue = deque([node])\n        while queue:\n            curr = queue.popleft()\n            for neighbor in curr.neighbors:\n                if neighbor not in clones:\n                    clones[neighbor] = type(neighbor)(neighbor.val)\n                    queue.append(neighbor)\n                clones[curr].neighbors.append(clones[neighbor])\n        return clones[node]''',"explanation":"\n  PATTERN: BFS + HashMap\n  - Use hashmap to map original node to cloned node\n  - BFS to visit all nodes\n  TIME: O(V+E) | SPACE: O(V)"},
+    30: {"name":"Max Area of Island","difficulty":"Medium","topic":"BFS/DFS","url":"https://leetcode.com/problems/max-area-of-island","filename":"max_area_island.py","solution":'''from typing import List\n\nclass Solution:\n    def maxAreaOfIsland(self, grid: List[List[int]]) -> int:\n        max_area = 0\n        def dfs(r, c):\n            if r<0 or r>=len(grid) or c<0 or c>=len(grid[0]) or grid[r][c]==0: return 0\n            grid[r][c] = 0\n            return 1 + dfs(r+1,c) + dfs(r-1,c) + dfs(r,c+1) + dfs(r,c-1)\n        for r in range(len(grid)):\n            for c in range(len(grid[0])):\n                if grid[r][c] == 1:\n                    max_area = max(max_area, dfs(r,c))\n        return max_area''',"explanation":"\n  PATTERN: DFS on Grid\n  - DFS returns size of island\n  - Track maximum island size\n  TIME: O(n*m) | SPACE: O(n*m)"},
+    31: {"name":"Find Minimum in Rotated Sorted Array","difficulty":"Medium","topic":"Binary Search","url":"https://leetcode.com/problems/find-minimum-in-rotated-sorted-array","filename":"find_minimum_rotated.py","solution":'''from typing import List\n\nclass Solution:\n    def findMin(self, nums: List[int]) -> int:\n        left, right = 0, len(nums) - 1\n        while left < right:\n            mid = (left + right) // 2\n            if nums[mid] > nums[right]:\n                left = mid + 1\n            else:\n                right = mid\n        return nums[left]''',"explanation":"\n  PATTERN: Binary Search on Rotated Array\n  - If mid > right, minimum is in right half\n  - Otherwise minimum is in left half including mid\n  TIME: O(log n) | SPACE: O(1)"},
+    32: {"name":"Search in Rotated Sorted Array","difficulty":"Medium","topic":"Binary Search","url":"https://leetcode.com/problems/search-in-rotated-sorted-array","filename":"search_rotated_array.py","solution":'''from typing import List\n\nclass Solution:\n    def search(self, nums: List[int], target: int) -> int:\n        left, right = 0, len(nums) - 1\n        while left <= right:\n            mid = (left + right) // 2\n            if nums[mid] == target: return mid\n            if nums[left] <= nums[mid]:\n                if nums[left] <= target < nums[mid]:\n                    right = mid - 1\n                else:\n                    left = mid + 1\n            else:\n                if nums[mid] < target <= nums[right]:\n                    left = mid + 1\n                else:\n                    right = mid - 1\n        return -1''',"explanation":"\n  PATTERN: Binary Search (Modified)\n  - One half is always sorted\n  - Check if target is in sorted half, adjust accordingly\n  TIME: O(log n) | SPACE: O(1)"},
+    33: {"name":"Reorder List","difficulty":"Medium","topic":"Linked List","url":"https://leetcode.com/problems/reorder-list","filename":"reorder_list.py","solution":'''class Solution:\n    def reorderList(self, head) -> None:\n        slow, fast = head, head.next\n        while fast and fast.next:\n            slow = slow.next\n            fast = fast.next.next\n        second = slow.next\n        slow.next = None\n        prev = None\n        while second:\n            tmp = second.next\n            second.next = prev\n            prev = second\n            second = tmp\n        first, second = head, prev\n        while second:\n            tmp1, tmp2 = first.next, second.next\n            first.next = second\n            second.next = tmp1\n            first, second = tmp1, tmp2''',"explanation":"\n  PATTERN: Find Middle + Reverse + Merge\n  - Step 1: Find middle using slow/fast pointers\n  - Step 2: Reverse second half\n  - Step 3: Merge two halves alternately\n  TIME: O(n) | SPACE: O(1)"},
+    34: {"name":"Remove Nth Node From End","difficulty":"Medium","topic":"Linked List","url":"https://leetcode.com/problems/remove-nth-node-from-end-of-list","filename":"remove_nth_node.py","solution":'''class Solution:\n    def removeNthFromEnd(self, head, n: int):\n        dummy = type(head)(0)\n        dummy.next = head\n        fast = slow = dummy\n        for _ in range(n + 1):\n            fast = fast.next\n        while fast:\n            fast = fast.next\n            slow = slow.next\n        slow.next = slow.next.next\n        return dummy.next''',"explanation":"\n  PATTERN: Two Pointers with gap\n  - Move fast n+1 steps ahead\n  - Move both until fast is None\n  - slow.next is the node to remove\n  TIME: O(n) | SPACE: O(1)"},
+    35: {"name":"Container With Most Water","difficulty":"Medium","topic":"Two Pointers","url":"https://leetcode.com/problems/container-with-most-water","filename":"container_most_water.py","solution":'''from typing import List\n\nclass Solution:\n    def maxArea(self, height: List[int]) -> int:\n        left, right = 0, len(height) - 1\n        max_water = 0\n        while left < right:\n            water = min(height[left], height[right]) * (right - left)\n            max_water = max(max_water, water)\n            if height[left] < height[right]:\n                left += 1\n            else:\n                right -= 1\n        return max_water''',"explanation":"\n  PATTERN: Two Pointers\n  - Water = min(left, right) * width\n  - Move the shorter side inward (greedy)\n  TIME: O(n) | SPACE: O(1)"},
+    36: {"name":"Combination Sum","difficulty":"Medium","topic":"Backtracking","url":"https://leetcode.com/problems/combination-sum","filename":"combination_sum.py","solution":'''from typing import List\n\nclass Solution:\n    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:\n        res = []\n        def dfs(i, current, total):\n            if total == target:\n                res.append(current[:])\n                return\n            if i >= len(candidates) or total > target:\n                return\n            current.append(candidates[i])\n            dfs(i, current, total + candidates[i])\n            current.pop()\n            dfs(i + 1, current, total)\n        dfs(0, [], 0)\n        return res''',"explanation":"\n  PATTERN: Backtracking\n  - Two choices: include current candidate OR skip it\n  - Can reuse same candidate (pass same index i)\n  TIME: O(2^target) | SPACE: O(target)"},
+    37: {"name":"Unique Paths","difficulty":"Medium","topic":"Dynamic Programming","url":"https://leetcode.com/problems/unique-paths","filename":"unique_paths.py","solution":'''class Solution:\n    def uniquePaths(self, m: int, n: int) -> int:\n        dp = [[1] * n for _ in range(m)]\n        for r in range(1, m):\n            for c in range(1, n):\n                dp[r][c] = dp[r-1][c] + dp[r][c-1]\n        return dp[m-1][n-1]''',"explanation":"\n  PATTERN: Dynamic Programming 2D\n  - dp[r][c] = paths from top + paths from left\n  - First row and column are all 1s\n  TIME: O(m*n) | SPACE: O(m*n)"},
+    38: {"name":"House Robber","difficulty":"Medium","topic":"Dynamic Programming","url":"https://leetcode.com/problems/house-robber","filename":"house_robber.py","solution":'''from typing import List\n\nclass Solution:\n    def rob(self, nums: List[int]) -> int:\n        prev2, prev1 = 0, 0\n        for num in nums:\n            curr = max(prev1, prev2 + num)\n            prev2 = prev1\n            prev1 = curr\n        return prev1''',"explanation":"\n  PATTERN: Dynamic Programming\n  - At each house: rob it (prev2 + current) OR skip it (prev1)\n  - Take the maximum\n  TIME: O(n) | SPACE: O(1)"},
+    39: {"name":"Jump Game","difficulty":"Medium","topic":"Greedy","url":"https://leetcode.com/problems/jump-game","filename":"jump_game.py","solution":'''from typing import List\n\nclass Solution:\n    def canJump(self, nums: List[int]) -> bool:\n        max_reach = 0\n        for i, jump in enumerate(nums):\n            if i > max_reach: return False\n            max_reach = max(max_reach, i + jump)\n        return True''',"explanation":"\n  PATTERN: Greedy\n  - Track maximum reachable index\n  - If current index exceeds max reach, impossible\n  TIME: O(n) | SPACE: O(1)"},
+    40: {"name":"Rotate Image","difficulty":"Medium","topic":"Array","url":"https://leetcode.com/problems/rotate-image","filename":"rotate_image.py","solution":'''from typing import List\n\nclass Solution:\n    def rotate(self, matrix: List[List[int]]) -> None:\n        n = len(matrix)\n        for r in range(n):\n            for c in range(r+1, n):\n                matrix[r][c], matrix[c][r] = matrix[c][r], matrix[r][c]\n        for r in range(n):\n            matrix[r].reverse()''',"explanation":"\n  PATTERN: Transpose + Reverse\n  - Step 1: Transpose matrix (swap matrix[r][c] with matrix[c][r])\n  - Step 2: Reverse each row\n  TIME: O(n^2) | SPACE: O(1)"},
+    41: {"name":"Group Anagrams","difficulty":"Medium","topic":"HashMap","url":"https://leetcode.com/problems/group-anagrams","filename":"group_anagrams.py","solution":'''from typing import List\nfrom collections import defaultdict\n\nclass Solution:\n    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:\n        anagram_map = defaultdict(list)\n        for s in strs:\n            key = tuple(sorted(s))\n            anagram_map[key].append(s)\n        return list(anagram_map.values())''',"explanation":"\n  PATTERN: HashMap with sorted string as key\n  - Anagrams have same sorted characters\n  - Group by sorted key\n  TIME: O(n*k*log k) | SPACE: O(n*k)"},
+    42: {"name":"Top K Frequent Elements","difficulty":"Medium","topic":"Heap","url":"https://leetcode.com/problems/top-k-frequent-elements","filename":"top_k_frequent.py","solution":'''from typing import List\nfrom collections import Counter\n\nclass Solution:\n    def topKFrequent(self, nums: List[int], k: int) -> List[int]:\n        count = Counter(nums)\n        buckets = [[] for _ in range(len(nums) + 1)]\n        for num, freq in count.items():\n            buckets[freq].append(num)\n        result = []\n        for i in range(len(buckets)-1, 0, -1):\n            for num in buckets[i]:\n                result.append(num)\n                if len(result) == k:\n                    return result''',"explanation":"\n  PATTERN: Bucket Sort\n  - Count frequencies\n  - Put numbers in buckets by frequency\n  - Read from highest frequency bucket\n  TIME: O(n) | SPACE: O(n)"},
+    43: {"name":"Longest Consecutive Sequence","difficulty":"Medium","topic":"HashSet","url":"https://leetcode.com/problems/longest-consecutive-sequence","filename":"longest_consecutive.py","solution":'''from typing import List\n\nclass Solution:\n    def longestConsecutive(self, nums: List[int]) -> int:\n        num_set = set(nums)\n        max_len = 0\n        for num in num_set:\n            if num - 1 not in num_set:\n                length = 1\n                while num + length in num_set:\n                    length += 1\n                max_len = max(max_len, length)\n        return max_len''',"explanation":"\n  PATTERN: HashSet\n  - Only start counting from sequence start (num-1 not in set)\n  - Count consecutive numbers forward\n  TIME: O(n) | SPACE: O(n)"},
+    44: {"name":"Valid Sudoku","difficulty":"Medium","topic":"Array","url":"https://leetcode.com/problems/valid-sudoku","filename":"valid_sudoku.py","solution":'''from typing import List\nfrom collections import defaultdict\n\nclass Solution:\n    def isValidSudoku(self, board: List[List[str]]) -> bool:\n        rows = defaultdict(set)\n        cols = defaultdict(set)\n        boxes = defaultdict(set)\n        for r in range(9):\n            for c in range(9):\n                val = board[r][c]\n                if val == ".": continue\n                box = (r//3, c//3)\n                if val in rows[r] or val in cols[c] or val in boxes[box]:\n                    return False\n                rows[r].add(val)\n                cols[c].add(val)\n                boxes[box].add(val)\n        return True''',"explanation":"\n  PATTERN: HashSet for rows, cols, boxes\n  - Check each number against its row, column, and 3x3 box\n  - box key = (r//3, c//3)\n  TIME: O(1) fixed 9x9 | SPACE: O(1)"},
+    45: {"name":"Spiral Matrix","difficulty":"Medium","topic":"Array","url":"https://leetcode.com/problems/spiral-matrix","filename":"spiral_matrix.py","solution":'''from typing import List\n\nclass Solution:\n    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:\n        res = []\n        top, bottom = 0, len(matrix)-1\n        left, right = 0, len(matrix[0])-1\n        while top <= bottom and left <= right:\n            for c in range(left, right+1): res.append(matrix[top][c])\n            top += 1\n            for r in range(top, bottom+1): res.append(matrix[r][right])\n            right -= 1\n            if top <= bottom:\n                for c in range(right, left-1, -1): res.append(matrix[bottom][c])\n                bottom -= 1\n            if left <= right:\n                for r in range(bottom, top-1, -1): res.append(matrix[r][left])\n                left += 1\n        return res''',"explanation":"\n  PATTERN: Layer by layer with 4 boundaries\n  - top, bottom, left, right boundaries\n  - Shrink boundaries after each direction\n  TIME: O(n*m) | SPACE: O(1)"},
+    46: {"name":"Set Matrix Zeroes","difficulty":"Medium","topic":"Array","url":"https://leetcode.com/problems/set-matrix-zeroes","filename":"set_matrix_zeroes.py","solution":'''from typing import List\n\nclass Solution:\n    def setZeroes(self, matrix: List[List[int]]) -> None:\n        rows, cols = set(), set()\n        for r in range(len(matrix)):\n            for c in range(len(matrix[0])):\n                if matrix[r][c] == 0:\n                    rows.add(r)\n                    cols.add(c)\n        for r in range(len(matrix)):\n            for c in range(len(matrix[0])):\n                if r in rows or c in cols:\n                    matrix[r][c] = 0''',"explanation":"\n  PATTERN: Mark rows and cols first\n  - First pass: record which rows and cols have zeros\n  - Second pass: zero out those rows and cols\n  TIME: O(n*m) | SPACE: O(n+m)"},
+    47: {"name":"Pacific Atlantic Water Flow","difficulty":"Medium","topic":"BFS/DFS","url":"https://leetcode.com/problems/pacific-atlantic-water-flow","filename":"pacific_atlantic.py","solution":'''from typing import List\nfrom collections import deque\n\nclass Solution:\n    def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:\n        rows, cols = len(heights), len(heights[0])\n        pac, atl = set(), set()\n        def bfs(starts, visited):\n            queue = deque(starts)\n            visited.update(starts)\n            while queue:\n                r, c = queue.popleft()\n                for dr, dc in [(1,0),(-1,0),(0,1),(0,-1)]:\n                    nr, nc = r+dr, c+dc\n                    if 0<=nr<rows and 0<=nc<cols and (nr,nc) not in visited and heights[nr][nc]>=heights[r][c]:\n                        visited.add((nr,nc))\n                        queue.append((nr,nc))\n        bfs([(r,0) for r in range(rows)]+[(0,c) for c in range(cols)], pac)\n        bfs([(r,cols-1) for r in range(rows)]+[(rows-1,c) for c in range(cols)], atl)\n        return [[r,c] for r in range(rows) for c in range(cols) if (r,c) in pac and (r,c) in atl]''',"explanation":"\n  PATTERN: Reverse BFS from ocean borders\n  - BFS from Pacific border cells\n  - BFS from Atlantic border cells\n  - Answer = cells reachable from BOTH\n  TIME: O(n*m) | SPACE: O(n*m)"},
+    48: {"name":"Course Schedule","difficulty":"Medium","topic":"Graph","url":"https://leetcode.com/problems/course-schedule","filename":"course_schedule.py","solution":'''from typing import List\nfrom collections import defaultdict\n\nclass Solution:\n    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:\n        graph = defaultdict(list)\n        for a, b in prerequisites:\n            graph[a].append(b)\n        visited = set()\n        def dfs(node):\n            if node in visited: return False\n            if graph[node] == []: return True\n            visited.add(node)\n            for nei in graph[node]:\n                if not dfs(nei): return False\n            visited.remove(node)\n            graph[node] = []\n            return True\n        for c in range(numCourses):\n            if not dfs(c): return False\n        return True''',"explanation":"\n  PATTERN: Cycle Detection in Directed Graph\n  - Build adjacency list\n  - DFS to detect cycles\n  - If cycle found, cannot finish all courses\n  TIME: O(V+E) | SPACE: O(V+E)"},
+    49: {"name":"House Robber II","difficulty":"Medium","topic":"Dynamic Programming","url":"https://leetcode.com/problems/house-robber-ii","filename":"house_robber_2.py","solution":'''from typing import List\n\nclass Solution:\n    def rob(self, nums: List[int]) -> int:\n        if len(nums) == 1: return nums[0]\n        def rob_linear(houses):\n            prev2, prev1 = 0, 0\n            for num in houses:\n                curr = max(prev1, prev2 + num)\n                prev2, prev1 = prev1, curr\n            return prev1\n        return max(rob_linear(nums[:-1]), rob_linear(nums[1:]))''',"explanation":"\n  PATTERN: DP - Run twice, skip one end\n  - Houses in circle: first and last cannot both be robbed\n  - Run House Robber I on nums[:-1] and nums[1:]\n  - Take maximum of both\n  TIME: O(n) | SPACE: O(1)"},
+    50: {"name":"Longest Palindromic Substring","difficulty":"Medium","topic":"Dynamic Programming","url":"https://leetcode.com/problems/longest-palindromic-substring","filename":"longest_palindrome.py","solution":'''class Solution:\n    def longestPalindrome(self, s: str) -> str:\n        res = ""\n        def expand(l, r):\n            nonlocal res\n            while l >= 0 and r < len(s) and s[l] == s[r]:\n                if r - l + 1 > len(res):\n                    res = s[l:r+1]\n                l -= 1\n                r += 1\n        for i in range(len(s)):\n            expand(i, i)\n            expand(i, i+1)\n        return res''',"explanation":"\n  PATTERN: Expand Around Center\n  - For each character, expand outward checking palindrome\n  - Check both odd (i,i) and even (i,i+1) centers\n  TIME: O(n^2) | SPACE: O(1)"},
 }
 
 
@@ -38,7 +63,7 @@ def load_progress():
     if os.path.exists(PROGRESS_FILE):
         with open(PROGRESS_FILE,'r') as f:
             return json.load(f)
-    return {"completed_days":[1,2,3,4,5,6,7,8,9],"start_date":"2026-04-27"}
+    return {"completed_days":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25],"start_date":"2026-04-27"}
 
 def save_progress(p):
     with open(PROGRESS_FILE,'w') as f:
@@ -62,18 +87,17 @@ def show_notification(title, msg):
         subprocess.run(['powershell','-Command',f'Add-Type -AssemblyName System.Windows.Forms; $n=New-Object System.Windows.Forms.NotifyIcon; $n.Icon=[System.Drawing.SystemIcons]::Information; $n.Visible=$true; $n.ShowBalloonTip(8000,"{title}","{msg}",[System.Windows.Forms.ToolTipIcon]::Info); Start-Sleep 3; $n.Dispose()'],capture_output=True)
     except: pass
 
-def show_solution(p, prob):
+def show_solution(prob):
     print("\n"+"="*55)
-    print(f"  💡 SOLUTION — {prob['name']}")
+    print(f"  SOLUTION: {prob['name']}")
     print("="*55)
-    print(f"\n  📖 EXPLANATION:{prob['explanation']}")
-    print(f"\n  💻 CODE:")
+    print(f"\n  EXPLANATION:{prob['explanation']}")
+    print(f"\n  CODE:")
     print("  "+"-"*50)
     for line in prob['solution'].split('\\n'):
         print(f"  {line}")
     print("  "+"-"*50)
-    print("\n  ⚡ TYPE this on LeetCode (don't copy-paste!)")
-    print("  Understanding > memorizing!")
+    print("\n  TYPE this on LeetCode - don't copy paste!")
     print("="*55)
 
 def save_and_push(day, prob, progress):
@@ -81,10 +105,8 @@ def save_and_push(day, prob, progress):
     content = f"# Day {day}: {prob['name']}\n# Difficulty: {prob['difficulty']}\n# Topic: {prob['topic']}\n# Date: {datetime.date.today()}\n\n{prob['solution'].replace(chr(92)+'n', chr(10))}\n"
     with open(filepath,'w') as f:
         f.write(content)
-    print(f"  ✅ Saved: {prob['filename']}")
-    subprocess.run(['code', filepath], capture_output=True)
-
-    # Update README
+    print(f"  Saved: {prob['filename']}")
+    subprocess.run(['code', filepath], capture_output=True, shell=True)
     with open(README_PATH,'r') as f:
         content = f.read()
     new_row = f"| {day} | {prob['name']} | {prob['difficulty']} | {prob['topic']} |"
@@ -98,82 +120,61 @@ def save_and_push(day, prob, progress):
             lines.insert(last+1, new_row)
             with open(README_PATH,'w') as f:
                 f.write('\n'.join(lines))
-            print(f"  ✅ README updated!")
-
-    # Git push
+            print(f"  README updated!")
     try:
         os.chdir(DSA_FOLDER)
         subprocess.run(['git','add','.'],check=True)
         r = subprocess.run(['git','commit','-m',f'Day {day}: Solved {prob["name"]}'],capture_output=True,text=True)
         if 'nothing to commit' not in r.stdout:
             subprocess.run(['git','push','origin','master'],check=True)
-            print(f"  ✅ Pushed to GitHub! 🎉")
+            print(f"  Pushed to GitHub!")
         else:
-            print("  📁 Already up to date")
+            print("  Already up to date")
     except Exception as e:
-        print(f"  ⚠️ Git error: {e}\n  Run: git pull origin master")
-
+        print(f"  Git error: {e}\n  Run: git pull origin master")
     if day not in progress["completed_days"]:
         progress["completed_days"].append(day)
         save_progress(progress)
     streak = calculate_streak(progress)
-    print(f"\n  🎉 Day {day} COMPLETE! Streak: {streak} days!")
-    print("  🟩 " * min(streak,15))
-    show_notification(f"Day {day} Complete!",f"Streak: {streak} days! Keep going!")
+    print(f"\n  Day {day} COMPLETE! Streak: {streak} days!")
+    print("  green " * min(streak,15))
+    show_notification(f"Day {day} Complete!",f"Streak: {streak} days!")
 
 def show_progress(p):
     done = len(p["completed_days"])
     streak = calculate_streak(p)
     pct = int((done/150)*100)
-    bar = "█"*(pct//5)+"░"*(20-pct//5)
-    print("\n"+"="*55)
-    print("  📊 SHESHANDRA'S PROGRESS")
-    print("="*55)
-    print(f"  ✅ Solved  : {done}/150")
-    print(f"  🔥 Streak  : {streak} days")
-    print(f"  🎯 Target  : Google ML Engineer 2028")
-    print(f"\n  [{bar}] {pct}%")
-    print("="*55)
+    bar = "X"*(pct//5)+"_"*(20-pct//5)
+    print(f"\n  Solved: {done}/150 | Streak: {streak} days | [{bar}] {pct}%")
 
 def main():
-    print("\n"+"="*55)
-    print("  🚀 SHESHANDRA'S DAILY LEETCODE TRACKER")
-    print("  🎯 Target: Google ML Engineer 2028")
-    print("="*55)
+    print("\n  SHESHANDRA'S DAILY LEETCODE TRACKER")
+    print("  Target: Google ML Engineer 2028")
     progress = load_progress()
     day = get_today_day(progress)
     if day not in PROBLEMS:
-        print(f"\n  Day {day} problem not added yet! Ask Claude to add more!")
+        print(f"\n  Day {day} not added yet! Ask Claude to add more problems!")
         return
     prob = PROBLEMS[day]
-    show_notification(f"Day {day} — LeetCode! 🔥", f"{prob['name']} ({prob['difficulty']})")
+    show_notification(f"Day {day} LeetCode!", f"{prob['name']} ({prob['difficulty']})")
     while True:
-        print("\n"+"="*55)
-        print(f"  🔥 DAY {day} — {prob['name']}")
-        print(f"     {prob['difficulty']} | {prob['topic']}")
-        print(f"  🔗 {prob['url']}")
-        print("-"*55)
-        print("  [1] 🌐 Open LeetCode in browser")
-        print("  [2] 💡 Show solution + explanation")
-        print("  [3] 🚀 Save + Push GitHub + Update README")
-        print("  [4] 📊 My progress")
-        print("  [5] ❌ Exit")
-        print("="*55)
-        choice = input("\n  Choice (1-5): ").strip()
+        print(f"\n  DAY {day}: {prob['name']} | {prob['difficulty']} | {prob['topic']}")
+        print(f"  {prob['url']}")
+        print("  [1] Open LeetCode  [2] Show Solution  [3] Save+Push  [4] Progress  [5] Exit")
+        choice = input("  Choice: ").strip()
         if choice=='1':
             webbrowser.open(prob['url'])
-            print("  🌐 LeetCode opened!")
         elif choice=='2':
-            show_solution(progress, prob)
+            show_solution(prob)
         elif choice=='3':
             save_and_push(day, prob, progress)
         elif choice=='4':
             show_progress(progress)
         elif choice=='5':
-            print("\n  👋 See you tomorrow! 💪")
+            print("  See you tomorrow!")
             break
         else:
-            print("  ⚠️ Enter 1-5!")
+            print("  Enter 1-5!")
 
 if __name__=="__main__":
     main()

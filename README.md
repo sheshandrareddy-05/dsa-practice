@@ -36,6 +36,7 @@ journey to become an ML Engineer at Google.
 | 23 | 3Sum | Medium | Two Pointers |
 | 24 | Product of Array Except Self | Medium | Array |
 | 25 | Number of Islands | Medium | BFS/DFS |
+| 26 | Coin Change | Medium | Dynamic Programming |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
