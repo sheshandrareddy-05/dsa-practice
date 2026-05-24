@@ -37,6 +37,7 @@ journey to become an ML Engineer at Google.
 | 24 | Product of Array Except Self | Medium | Array |
 | 25 | Number of Islands | Medium | BFS/DFS |
 | 26 | Coin Change | Medium | Dynamic Programming |
+| 27 | Word Search | Medium | Backtracking |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
