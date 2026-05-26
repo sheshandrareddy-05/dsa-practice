@@ -38,6 +38,7 @@ journey to become an ML Engineer at Google.
 | 25 | Number of Islands | Medium | BFS/DFS |
 | 26 | Coin Change | Medium | Dynamic Programming |
 | 27 | Word Search | Medium | Backtracking |
+| 28 | Binary Tree Level Order Traversal | Medium | BFS |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
