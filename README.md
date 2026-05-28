@@ -40,6 +40,7 @@ journey to become an ML Engineer at Google.
 | 27 | Word Search | Medium | Backtracking |
 | 28 | Binary Tree Level Order Traversal | Medium | BFS |
 | 29 | Clone Graph | Medium | Graph |
+| 30 | Max Area of Island | Medium | BFS/DFS |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
