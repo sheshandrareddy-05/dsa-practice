@@ -42,6 +42,7 @@ journey to become an ML Engineer at Google.
 | 29 | Clone Graph | Medium | Graph |
 | 30 | Max Area of Island | Medium | BFS/DFS |
 | 31 | Find Minimum in Rotated Sorted Array | Medium | Binary Search |
+| 32 | Search in Rotated Sorted Array | Medium | Binary Search |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
