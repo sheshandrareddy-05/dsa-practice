@@ -43,6 +43,7 @@ journey to become an ML Engineer at Google.
 | 30 | Max Area of Island | Medium | BFS/DFS |
 | 31 | Find Minimum in Rotated Sorted Array | Medium | Binary Search |
 | 32 | Search in Rotated Sorted Array | Medium | Binary Search |
+| 33 | Reorder List | Medium | Linked List |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
