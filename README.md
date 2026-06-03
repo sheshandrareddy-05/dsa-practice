@@ -46,6 +46,7 @@ journey to become an ML Engineer at Google.
 | 33 | Reorder List | Medium | Linked List |
 | 34 | Remove Nth Node From End | Medium | Linked List |
 | 35 | Container With Most Water | Medium | Two Pointers |
+| 36 | Combination Sum | Medium | Backtracking |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
