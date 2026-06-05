@@ -48,6 +48,7 @@ journey to become an ML Engineer at Google.
 | 35 | Container With Most Water | Medium | Two Pointers |
 | 36 | Combination Sum | Medium | Backtracking |
 | 37 | Unique Paths | Medium | Dynamic Programming |
+| 38 | House Robber | Medium | Dynamic Programming |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
