@@ -49,6 +49,7 @@ journey to become an ML Engineer at Google.
 | 36 | Combination Sum | Medium | Backtracking |
 | 37 | Unique Paths | Medium | Dynamic Programming |
 | 38 | House Robber | Medium | Dynamic Programming |
+| 39 | Jump Game | Medium | Greedy |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
