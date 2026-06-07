@@ -50,6 +50,7 @@ journey to become an ML Engineer at Google.
 | 37 | Unique Paths | Medium | Dynamic Programming |
 | 38 | House Robber | Medium | Dynamic Programming |
 | 39 | Jump Game | Medium | Greedy |
+| 40 | Rotate Image | Medium | Array |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
