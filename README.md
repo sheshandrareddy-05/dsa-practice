@@ -51,6 +51,7 @@ journey to become an ML Engineer at Google.
 | 38 | House Robber | Medium | Dynamic Programming |
 | 39 | Jump Game | Medium | Greedy |
 | 40 | Rotate Image | Medium | Array |
+| 41 | Group Anagrams | Medium | HashMap |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
