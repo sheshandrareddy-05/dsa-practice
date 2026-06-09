@@ -52,6 +52,7 @@ journey to become an ML Engineer at Google.
 | 39 | Jump Game | Medium | Greedy |
 | 40 | Rotate Image | Medium | Array |
 | 41 | Group Anagrams | Medium | HashMap |
+| 42 | Top K Frequent Elements | Medium | Heap |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
