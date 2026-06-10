@@ -53,6 +53,7 @@ journey to become an ML Engineer at Google.
 | 40 | Rotate Image | Medium | Array |
 | 41 | Group Anagrams | Medium | HashMap |
 | 42 | Top K Frequent Elements | Medium | Heap |
+| 43 | Longest Consecutive Sequence | Medium | HashSet |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
