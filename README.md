@@ -54,6 +54,7 @@ journey to become an ML Engineer at Google.
 | 41 | Group Anagrams | Medium | HashMap |
 | 42 | Top K Frequent Elements | Medium | Heap |
 | 43 | Longest Consecutive Sequence | Medium | HashSet |
+| 44 | Valid Sudoku | Medium | Array |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
