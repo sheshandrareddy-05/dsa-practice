@@ -56,6 +56,7 @@ journey to become an ML Engineer at Google.
 | 43 | Longest Consecutive Sequence | Medium | HashSet |
 | 44 | Valid Sudoku | Medium | Array |
 | 45 | Spiral Matrix | Medium | Array |
+| 46 | Set Matrix Zeroes | Medium | Array |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
