@@ -58,6 +58,7 @@ journey to become an ML Engineer at Google.
 | 45 | Spiral Matrix | Medium | Array |
 | 46 | Set Matrix Zeroes | Medium | Array |
 | 47 | Pacific Atlantic Water Flow | Medium | BFS/DFS |
+| 48 | Course Schedule | Medium | Graph |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
