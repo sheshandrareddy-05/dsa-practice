@@ -60,6 +60,7 @@ journey to become an ML Engineer at Google.
 | 47 | Pacific Atlantic Water Flow | Medium | BFS/DFS |
 | 48 | Course Schedule | Medium | Graph |
 | 49 | House Robber II | Medium | Dynamic Programming |
+| 50 | Longest Palindromic Substring | Medium | Dynamic Programming |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
