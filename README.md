@@ -62,6 +62,7 @@ journey to become an ML Engineer at Google.
 | 49 | House Robber II | Medium | Dynamic Programming |
 | 50 | Longest Palindromic Substring | Medium | Dynamic Programming |
 | 51 | Min Stack | Medium | Stack |
+| 52 | Daily Temperatures | Medium | Monotonic Stack |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
