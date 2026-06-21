@@ -63,6 +63,7 @@ journey to become an ML Engineer at Google.
 | 50 | Longest Palindromic Substring | Medium | Dynamic Programming |
 | 51 | Min Stack | Medium | Stack |
 | 52 | Daily Temperatures | Medium | Monotonic Stack |
+| 53 | Car Fleet | Medium | Monotonic Stack |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
