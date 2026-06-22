@@ -64,6 +64,7 @@ journey to become an ML Engineer at Google.
 | 51 | Min Stack | Medium | Stack |
 | 52 | Daily Temperatures | Medium | Monotonic Stack |
 | 53 | Car Fleet | Medium | Monotonic Stack |
+| 54 | Evaluate Reverse Polish Notation | Medium | Stack |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
