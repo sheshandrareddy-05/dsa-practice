@@ -65,6 +65,7 @@ journey to become an ML Engineer at Google.
 | 52 | Daily Temperatures | Medium | Monotonic Stack |
 | 53 | Car Fleet | Medium | Monotonic Stack |
 | 54 | Evaluate Reverse Polish Notation | Medium | Stack |
+| 55 | Kth Largest Element in Array | Medium | Heap |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
