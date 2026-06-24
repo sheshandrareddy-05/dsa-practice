@@ -66,6 +66,7 @@ journey to become an ML Engineer at Google.
 | 53 | Car Fleet | Medium | Monotonic Stack |
 | 54 | Evaluate Reverse Polish Notation | Medium | Stack |
 | 55 | Kth Largest Element in Array | Medium | Heap |
+| 56 | Task Scheduler | Medium | Heap/Greedy |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
