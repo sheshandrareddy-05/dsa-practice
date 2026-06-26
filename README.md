@@ -68,6 +68,7 @@ journey to become an ML Engineer at Google.
 | 55 | Kth Largest Element in Array | Medium | Heap |
 | 56 | Task Scheduler | Medium | Heap/Greedy |
 | 57 | Design Twitter | Medium | Heap/OOP |
+| 58 | Subsets | Medium | Backtracking |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
