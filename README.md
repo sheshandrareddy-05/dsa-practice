@@ -69,6 +69,7 @@ journey to become an ML Engineer at Google.
 | 56 | Task Scheduler | Medium | Heap/Greedy |
 | 57 | Design Twitter | Medium | Heap/OOP |
 | 58 | Subsets | Medium | Backtracking |
+| 59 | Permutations | Medium | Backtracking |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
