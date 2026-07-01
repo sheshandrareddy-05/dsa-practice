@@ -71,6 +71,7 @@ journey to become an ML Engineer at Google.
 | 58 | Subsets | Medium | Backtracking |
 | 59 | Permutations | Medium | Backtracking |
 | 60 | Letter Combinations of Phone Number | Medium | Backtracking |
+| 61 | Subarray Sum Equals K | Medium | Prefix Sum + HashMap |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
