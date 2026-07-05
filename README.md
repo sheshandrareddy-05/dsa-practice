@@ -75,6 +75,7 @@ journey to become an ML Engineer at Google.
 | 62 | Minimum Window Substring | Hard | Sliding Window |
 | 63 | Trapping Rain Water | Hard | Two Pointers |
 | 64 | Sliding Window Maximum | Hard | Monotonic Deque |
+| 65 | Median of Two Sorted Arrays | Hard | Binary Search |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
