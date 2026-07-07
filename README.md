@@ -77,6 +77,7 @@ journey to become an ML Engineer at Google.
 | 64 | Sliding Window Maximum | Hard | Monotonic Deque |
 | 65 | Median of Two Sorted Arrays | Hard | Binary Search |
 | 66 | Find Median from Data Stream | Hard | Two Heaps |
+| 67 | Merge K Sorted Lists | Hard | Heap |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
