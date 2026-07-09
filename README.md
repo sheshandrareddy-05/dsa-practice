@@ -79,6 +79,7 @@ journey to become an ML Engineer at Google.
 | 66 | Find Median from Data Stream | Hard | Two Heaps |
 | 67 | Merge K Sorted Lists | Hard | Heap |
 | 68 | Reverse Nodes in K-Group | Hard | Linked List |
+| 69 | LRU Cache | Medium | Design + HashMap + DLL |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
