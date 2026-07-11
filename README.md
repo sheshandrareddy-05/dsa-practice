@@ -81,6 +81,7 @@ journey to become an ML Engineer at Google.
 | 68 | Reverse Nodes in K-Group | Hard | Linked List |
 | 69 | LRU Cache | Medium | Design + HashMap + DLL |
 | 70 | Word Break | Medium | Dynamic Programming |
+| 71 | Decode Ways | Medium | Dynamic Programming |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
