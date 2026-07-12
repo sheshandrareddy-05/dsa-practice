@@ -82,6 +82,7 @@ journey to become an ML Engineer at Google.
 | 69 | LRU Cache | Medium | Design + HashMap + DLL |
 | 70 | Word Break | Medium | Dynamic Programming |
 | 71 | Decode Ways | Medium | Dynamic Programming |
+| 72 | Partition Equal Subset Sum | Medium | Dynamic Programming |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
