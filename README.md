@@ -84,6 +84,7 @@ journey to become an ML Engineer at Google.
 | 71 | Decode Ways | Medium | Dynamic Programming |
 | 72 | Partition Equal Subset Sum | Medium | Dynamic Programming |
 | 73 | Target Sum | Medium | Dynamic Programming |
+| 74 | Longest Common Subsequence | Medium | Dynamic Programming |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
