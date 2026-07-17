@@ -87,6 +87,7 @@ journey to become an ML Engineer at Google.
 | 74 | Longest Common Subsequence | Medium | Dynamic Programming |
 | 75 | Edit Distance | Hard | Dynamic Programming |
 | 76 | Distinct Subsequences | Hard | Dynamic Programming |
+| 77 | Burst Balloons | Hard | Dynamic Programming (Interval) |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
