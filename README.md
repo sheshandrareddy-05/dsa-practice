@@ -88,6 +88,7 @@ journey to become an ML Engineer at Google.
 | 75 | Edit Distance | Hard | Dynamic Programming |
 | 76 | Distinct Subsequences | Hard | Dynamic Programming |
 | 77 | Burst Balloons | Hard | Dynamic Programming (Interval) |
+| 78 | Regular Expression Matching | Hard | Dynamic Programming |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
