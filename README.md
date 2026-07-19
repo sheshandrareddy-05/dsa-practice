@@ -89,6 +89,7 @@ journey to become an ML Engineer at Google.
 | 76 | Distinct Subsequences | Hard | Dynamic Programming |
 | 77 | Burst Balloons | Hard | Dynamic Programming (Interval) |
 | 78 | Regular Expression Matching | Hard | Dynamic Programming |
+| 79 | Number of 1 Bits | Easy | Bit Manipulation |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
