@@ -92,6 +92,7 @@ journey to become an ML Engineer at Google.
 | 79 | Number of 1 Bits | Easy | Bit Manipulation |
 | 80 | Counting Bits | Easy | Bit Manipulation |
 | 81 | Reverse Bits | Easy | Bit Manipulation |
+| 82 | Missing Number | Easy | Bit Manipulation |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
