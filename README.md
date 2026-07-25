@@ -94,6 +94,7 @@ journey to become an ML Engineer at Google.
 | 81 | Reverse Bits | Easy | Bit Manipulation |
 | 82 | Missing Number | Easy | Bit Manipulation |
 | 83 | Sum of Two Integers | Medium | Bit Manipulation |
+| 84 | Number of Connected Components | Medium | Union Find |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
