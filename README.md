@@ -96,6 +96,7 @@ journey to become an ML Engineer at Google.
 | 83 | Sum of Two Integers | Medium | Bit Manipulation |
 | 84 | Number of Connected Components | Medium | Union Find |
 | 85 | Redundant Connection | Medium | Union Find |
+| 86 | Graph Valid Tree | Medium | Union Find / BFS |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
