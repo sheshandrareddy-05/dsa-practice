@@ -98,6 +98,7 @@ journey to become an ML Engineer at Google.
 | 85 | Redundant Connection | Medium | Union Find |
 | 86 | Graph Valid Tree | Medium | Union Find / BFS |
 | 87 | Course Schedule II | Medium | Topological Sort |
+| 88 | Alien Dictionary | Hard | Topological Sort |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
