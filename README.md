@@ -99,6 +99,7 @@ journey to become an ML Engineer at Google.
 | 86 | Graph Valid Tree | Medium | Union Find / BFS |
 | 87 | Course Schedule II | Medium | Topological Sort |
 | 88 | Alien Dictionary | Hard | Topological Sort |
+| 89 | Network Delay Time | Medium | Dijkstra / Graph |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
