@@ -100,6 +100,7 @@ journey to become an ML Engineer at Google.
 | 87 | Course Schedule II | Medium | Topological Sort |
 | 88 | Alien Dictionary | Hard | Topological Sort |
 | 89 | Network Delay Time | Medium | Dijkstra / Graph |
+| 90 | Cheapest Flights K Stops | Medium | Bellman-Ford / Graph |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
