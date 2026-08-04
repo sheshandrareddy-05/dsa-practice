@@ -103,6 +103,7 @@ journey to become an ML Engineer at Google.
 | 90 | Cheapest Flights K Stops | Medium | Bellman-Ford / Graph |
 | 91 | Swim in Rising Water | Hard | Dijkstra / Binary Search |
 | 92 | Reconstruct Itinerary | Hard | Graph / Euler Path |
+| 93 | Implement Trie | Medium | Trie |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
