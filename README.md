@@ -104,6 +104,7 @@ journey to become an ML Engineer at Google.
 | 91 | Swim in Rising Water | Hard | Dijkstra / Binary Search |
 | 92 | Reconstruct Itinerary | Hard | Graph / Euler Path |
 | 93 | Implement Trie | Medium | Trie |
+| 94 | Design Add and Search Words | Medium | Trie + DFS |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
