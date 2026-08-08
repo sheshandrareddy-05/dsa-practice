@@ -106,6 +106,7 @@ journey to become an ML Engineer at Google.
 | 93 | Implement Trie | Medium | Trie |
 | 94 | Design Add and Search Words | Medium | Trie + DFS |
 | 95 | Word Search II | Hard | Trie + Backtracking |
+| 96 | N Queens | Hard | Backtracking |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
