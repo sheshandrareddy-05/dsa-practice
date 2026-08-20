@@ -111,6 +111,7 @@ journey to become an ML Engineer at Google.
 | 98 | Maximum Profit in Job Scheduling | Hard | DP + Binary Search |
 | 99 | Count of Smaller Numbers After Self | Hard | Merge Sort / Fenwick Tree |
 | 100 | Serialize and Deserialize Binary Tree | Hard | Tree + BFS |
+| 101 | Palindrome Linked List | Easy | Linked List + Two Pointers |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
