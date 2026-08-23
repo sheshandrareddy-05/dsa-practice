@@ -112,6 +112,7 @@ journey to become an ML Engineer at Google.
 | 99 | Count of Smaller Numbers After Self | Hard | Merge Sort / Fenwick Tree |
 | 100 | Serialize and Deserialize Binary Tree | Hard | Tree + BFS |
 | 101 | Palindrome Linked List | Easy | Linked List + Two Pointers |
+| 102 | Path Sum | Easy | Binary Tree |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
