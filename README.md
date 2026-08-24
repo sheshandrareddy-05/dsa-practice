@@ -113,6 +113,7 @@ journey to become an ML Engineer at Google.
 | 100 | Serialize and Deserialize Binary Tree | Hard | Tree + BFS |
 | 101 | Palindrome Linked List | Easy | Linked List + Two Pointers |
 | 102 | Path Sum | Easy | Binary Tree |
+| 103 | Symmetric Tree | Easy | Binary Tree |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
