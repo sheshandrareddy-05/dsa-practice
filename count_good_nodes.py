@@ -1,0 +1,13 @@
+# Day 106: Count Good Nodes in Binary Tree
+# Difficulty: Medium
+# Topic: Binary Tree DFS
+# Date: 2026-08-27
+
+class Solution:
+    def goodNodes(self, root) -> int:
+        def dfs(node, max_so_far):
+            if not node: return 0
+            good = 1 if node.val >= max_so_far else 0
+            max_so_far = max(max_so_far, node.val)
+            return good + dfs(node.left, max_so_far) + dfs(node.right, max_so_far)
+        return dfs(root, root.val)
