@@ -117,6 +117,7 @@ journey to become an ML Engineer at Google.
 | 104 | Invert Binary Tree | Easy | Binary Tree |
 | 105 | Same Tree | Easy | Binary Tree |
 | 106 | Count Good Nodes in Binary Tree | Medium | Binary Tree DFS |
+| 107 | Validate Binary Search Tree | Medium | Binary Search Tree |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
