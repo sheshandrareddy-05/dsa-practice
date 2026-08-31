@@ -119,6 +119,7 @@ journey to become an ML Engineer at Google.
 | 106 | Count Good Nodes in Binary Tree | Medium | Binary Tree DFS |
 | 107 | Validate Binary Search Tree | Medium | Binary Search Tree |
 | 108 | Kth Smallest Element in BST | Medium | Binary Search Tree |
+| 109 | Binary Tree Right Side View | Medium | BFS / DFS |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
