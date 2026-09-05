@@ -121,6 +121,7 @@ journey to become an ML Engineer at Google.
 | 108 | Kth Smallest Element in BST | Medium | Binary Search Tree |
 | 109 | Binary Tree Right Side View | Medium | BFS / DFS |
 | 110 | Construct Binary Tree from Preorder and Inorder | Medium | Binary Tree |
+| 111 | Binary Tree Maximum Path Sum | Hard | Binary Tree DFS |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
