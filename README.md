@@ -124,6 +124,7 @@ journey to become an ML Engineer at Google.
 | 111 | Binary Tree Maximum Path Sum | Hard | Binary Tree DFS |
 | 112 | Subtree of Another Tree | Easy | Binary Tree |
 | 113 | Level Order Traversal II | Medium | BFS |
+| 114 | Maximum Width of Binary Tree | Medium | BFS |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
