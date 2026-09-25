@@ -127,6 +127,7 @@ journey to become an ML Engineer at Google.
 | 114 | Maximum Width of Binary Tree | Medium | BFS |
 | 115 | Path Sum II | Medium | Backtracking |
 | 116 | Minimum Depth of Binary Tree | Easy | BFS |
+| 117 | Merge Intervals | Medium | Intervals |
 
 ## About Me
 - ECE Student @ RGM College, Nandyal
